@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SDC,Kolar.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    
+ </head>
+ <body>
+   <div>
+      <header class="navnav">
+         <nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-image: linear-gradient(to right, #bb3030, #58cc1e);">
+            <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a href="a" class="nav-link dropdown-toggle" id="homedropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        About SDC
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="coursesdropdown" >
+                        <li><a class="dropdown-item" href="#overview" >Overview</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="#Mission" class="dropdown-item" >Mission and Goals</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        {% comment %} <li><a href="#Facts" class="dropdown-item" >Facts and Statistics</a></li>
+                        <li><hr class="dropdown-hr"></li> {% endcomment %}
+                        <li><a href="#Accreditation" class="dropdown-item" >Accreditation</a></li>
+                        <li><hr class="dropdown-hr"></li>
+   
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a href="a" class="nav-link dropdown-toggle" id="coursesdropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        COURSES
+                        
+                     </a>
+                        <ul class="dropdown-menu" aria-labelledby="coursesdropdown" >
+                           <li><a href="/courses/#bca" class="dropdown-item" target="-blank"> B.C.A</a></li>
+                           <li><hr class="dropdown-hr"></li>
+                           <li><a href="/courses/#bsc" class="dropdown-item" target="-blank">B.Sc</a></li>
+                           <li><hr class="dropdown-hr"></li>
+                           <li><a href="/courses/#bcom" class="dropdown-item" target="-blank">B.Com</a></li>
+                           <li><hr class="dropdown-hr"></li>
+                           <li><a href="/courses/#bba" class="dropdown-item" target="-blank">BBA</a></li>
+                           <li><hr class="dropdown-hr"></li> 
+                           <li><a href="/courses/#msc" class="dropdown-item" target="-blank">M.Sc</a></li>
+                           <li><hr class="dropdown-hr"></li> 
+                           <li><a href="/courses/#mcom" class="dropdown-item" target="-blank">M.Com</a></li>
+                           <li><hr class="dropdown-hr"></li>  
+                        </ul>                 
+                  </li>
+                  <li class="nav-item">
+                     <a href="/campuslife/" class="nav-link">
+                        CAMPUS LIFE
+                     </a>
+                     
+                  </li>
+                  {% comment %} <li class="nav-item dropdown">
+                     <a href="" class="nav-link dropdown-toggle" id="dptdropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        DEPARTMENTS
+                     </a> {% endcomment %}
+                     <ul class="dropdown-menu" aria-labelledby="dptdropdown" >
+                        <li><a href="/departments/#Science" class="dropdown-item" >Science</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="/departments/#Commerce" class="dropdown-item">Commerce</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="/departments/#Arts" class="dropdown-item">Arts</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                     </ul>  
+   
+                  </li>
+                  {% comment %} <li class="nav-item">
+                     <a href="/faculty/" class="nav-link">
+                        FACULTY
+                     </a>
+                  </li> {% endcomment %}
+                  {% comment %} <li class="nav-item">
+                     <a href="/admissions/" class="nav-link">
+                        ADMISSIONS
+                     </a>
+                  </li> {% endcomment %}
+                  <li class="nav-item">
+                     <a href="/alumni/" class="nav-link">
+                        ALUMNI
+                     </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a href="" class="nav-link dropdown-toggle" id="logdropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        LOGIN
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="logdropdown" >
+                        <li><a href="/hlogin/" class="dropdown-item" target="-blank">HOD Login</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="/tlogin/" class="dropdown-item" target="-blank">Teacher Login</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="/slogin/" class="dropdown-item" target="-blank">Student Login</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                        <li><a href="stafflogin" class="dropdown-item" target="-blank">Staff Login</a></li>
+                        <li><hr class="dropdown-hr"></li>
+                     </ul>  
+   
+                  </li>
+                  {% comment %} <li class="nav-item">
+                     <a href="a" class="nav-link">
+                        CONTACT
+                     </a>
+                  </li> {% endcomment %}
+               </ul>
+      
+            </div>
+            <form class="d-flex">
+               <input type="text" class="form-control me-2">
+               <button type="submit" class="btn btn">Search</button>
+            </form>
+         </nav>
+      </header>
+      <hr>
+   </div>
+   <div class="container-fluid">
+      <div class="head1">
+         <h2 class="text-center"><div class="head2">Smt. Danamma Channabasavaiah College of Arts, Commerce, Science and Management Studies.</div></h2>
+      </div>
+         <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/static/img/sdc-college-picture.jpg" class="d-block w-100" alt="...">
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h3>Smt. Danamma Channabasavaiah College of Arts, Commerce, Science and Management Studies.</h3>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <img src="/static/img/College-top-view.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/static/img/roots.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+   </div>
+  
+   <div>
+      <section id="overview">
+         <br>
+         <!-- <h4 ><div class="head2">Smt. Danamma Channabasavaiah College of Arts, Commerce, Science and Management Studies.</div></h4> -->
+         <h4 ><div class="head3"><u>Overview</u></div></h4>
+         <div class="p">
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the SDC institution. Though a relatively young university, founded in 2008 with only two courses i.e. , B.Com and BCA .The college started with only 100 stududents,now SDC has grown with many ug courses i.e, BBA , BSc and PG courses i.e, M.Com and MSc(Mathematics) with over 2500 students also with many achivements.<br>
+               To Provide Affordable, quality education to a wide cross-section of society without any discrimination of caste or creed with emphasis on social justice and innovative practice in teaching using latest technologies.&nbsp;
+            </p>
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A proud Golden Age institution, the SDC has a history as rich as it is remarkable. Since we are into competition, we have broken records and pioneered new education standards, rivaling and outpacing even our oldest peer institutions. We have rich traditions – traditions of access and opportunity for students, of academic excellence, of groundbreaking efforts, of serving our communities..&nbsp; <br> </p>
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At SDC, we believe every student will succeed if given the opportunity. All SDC students, regardless of their backgrounds or circumstances, succeed at the same rate. We invite you to explore more about our institution and discover how you can prosper at the fastest-rising SDC institution.At SDC, excellence and opportunity converge.&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smt. Danamma Channabasavaiah College of Arts, Commerce, Science and Management studies is located on NH-75, Kolar-Mulbagal by-pass road and the college is located just two kilometres away from Kolar KSRTC Bus Stand.&nbsp;</p>            
+         </div>
+      </section>
+      <section id="Mission">
+         <h4 ><div class="head3"><u>Mission and Goals</u></div></h4>
+         <br>
+         <p>In our college we won't just concentrate on academics but also we notice special talents of our students and give them the correct platform to execute their skills there by over all curriculum is developed. Students get involved in all aspects and better outine been provided. The Over all student Personality being developed.
+            Our Motto is not just to build an excellent student but also a create a better citizen for tomorrow's nation.
+         <br>
+         Imparting Higher Education in a background by uplifting the youth and to promote innovation, creativity and spirit of research among our students so that they strike a balance between present learning and their would-be-careers in later life.
+         To prepare responsible citizens out of our students with overall personality and sense of morality for a stronger nation and vibrant society.</p>
+      </section>
+      {% comment %} <section id="Facts">
+         <h4 ><div class="head3"><u>Facts and Statistics</u></div></h4>
+         <br>
+         <p></p>
+      </section>  {% endcomment %}
+      <section id="Accreditation">
+         <h4 ><div class="head3"><u>Accreditation</u></div></h4>
+         <br>
+         <p>Our college i.e Smt.Danamma Channabasavaiah College of Arts , Commerce , Science and Management Studies is accrediated by NAAC by B Grade</p>
+      </section>       
+   </div>
+ </body>
+</html>

@@ -1,0 +1,78 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'radio.css' %}">
+  </head>
+  <body>
+    <div class="studlogin">
+        <br><marquee><h4>Smt. Danamma Channabasavaiah College of Arts, Commerce, Science and Management Studies.</h4></marquee>
+        {% comment %} <h2>SDC STUDENT SIGN-IN</h2> {% endcomment %}
+        <style>
+        *
+        {
+        margin: 0;
+        padding: 0;
+        }
+        .studlogin
+        {
+        background-image: linear-gradient(to right,#de6262, #affb88);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200vh;
+        }
+        .loginbox{
+          width: 320px;
+          height: 800px;
+          top: 77%;
+        }
+        </style>
+        <div class="studsignin" >
+            <h1>SIGN-IN HERE</h1>
+            <br>
+            <form method="post">
+              {% csrf_token %}
+                <p>Register Number </p>
+                <input type="text" name ="studid"placeholder="Enter Your Register Number "><br>
+                <p>Enter Email </p>
+                <input type="email"name ="studmail" placeholder="Enter Your Email "><br>
+                <p>Name </p>
+                <input type="text"name ="studname" placeholder="Enter Your Name "><br>
+                <p>Semester </p>
+                <input type="radio"name ="studsem" id="1" value="1"placeholder="Select Your Semester "><label for="1">1</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsem" id="2" value="" value="2"placeholder="Select Your Semester "><label for="2">2</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsem"id="3" value="3"placeholder="Select Your Semester "><label for="3">3</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsem"id="4"value="4" placeholder="Select Your Semester "><label for="4">4</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsem"id="5"value="5"placeholder="Select Your Semester "><label for="5">5</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsem" id="6"value="6"placeholder="Select Your Semester "><label for="6">6</label><br>
+                <p>Section </p>
+                <input type="radio"name ="studsec" value="A"id="A" placeholder="Select Your Semester "><label for="A">A</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsec" value="B"id="B"placeholder="Select Your Semester "><label for="B">B</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio"name ="studsec"value="C"id="C" placeholder="Select Your Semester "><label for="C">C</label><br>
+                <p>Create Password</p>
+                <input type="password" name ="studpass" placeholder="Enter Password"><br>
+                <p>Confirm Password</p>
+                <input type="password" name ="studpass1" placeholder="Re-Enter Password"><br>
+                <br>
+                <input type="submit" value="SIGN-IN"><br>
+            </form>
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 0.36cm;background-color:red;">
+                  <strong>WARNING:{{ message }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                  
+            {% endfor %}
+        </div>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+  </body>
+</html>

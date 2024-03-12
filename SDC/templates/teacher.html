@@ -1,0 +1,126 @@
+{% load static %}
+<html>
+<head>
+    <title>TEACHERPAGE</title>  
+</head>
+    <body>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background-color: aquamarine;
+        }
+        h1{
+            font-family: sans-serif;
+            position: absolute;
+            left:2%;
+            top:10%;
+            color: green;
+            font-size: 1cm;
+        }
+        h2{
+            font-family: sans-serif;
+            position: absolute;
+            left:11%;
+            top:9.3%;
+            color: green;
+            font-size: 1cm;
+        }
+         .btn1{
+                font-family: sans-serif;
+                position: absolute;
+                left:8%;
+                top:80%;
+                color: green;
+                width: 200px;
+                height:50px;
+                font-size: 0.5cm;
+                cursor: pointer;
+            }
+                table, th, td{
+                  border: 2px solid black;
+                  border-collapse: collapse;
+                  text-align: center;
+                }
+              
+            .tb1{
+                font-family: sans-serif;
+                position: absolute;
+                left:2%;
+                top:40%;
+                font-size: 0.5cm;
+                text-align: center;
+            }
+        </style>
+        {% csrf_token %}
+        <h1>Hello, {% for i in rs %}</h1>
+        <h2 name="tname">{{i.tname}}</h2>
+        {% endfor %}
+        <form  method="post"  class="f1">
+            {% csrf_token %}
+            <table class="tb1" border="5">
+                {% csrf_token %}
+                {% load static %}
+                <tr>
+                    <td><h3>SELECT SEMESTER:</h3></td>
+                    <td><select>
+                        {% for i in myteacher %}
+                        <select name="fsem"><option>{{i.semester}}</option></select>
+                        {% endfor %}
+                      </select></td>
+                </tr>
+                <tr>
+                    <td><h3>SELECT SUBJECT:</h3></td>
+                    <td><select>
+                        {% for i in myteacher %}
+                        <option name="fsub">{{i.subjectname}}</option>
+                        {% endfor %}
+                      </select></td>
+                </tr>
+                <tr>
+                    <td><h3>SELECT SECTION:</h3></td>
+                    <td><select>
+                        {% for i in myteacher %}
+                        <option name="fsec">{{i.section}}</option>
+                        {% endfor %}
+                    </select></td>
+                </tr>
+            </table>
+        
+            <button type="submit" class="btn1">VIEW FEEDBACKS</button>
+
+            <form class="f2"  method="post">
+                <table class="factable" width="50%" align="right">
+                <tr>
+                  <th>STUDENT ID</th>
+                  <th>SECTION</th>
+                  <th>SUBJECT</th>
+                  <th>FEEDBACK</th>
+                </tr>
+                <tr>
+                    <td>R1911929</td>
+                    <td>A</td>
+                    <td>CNS</td>
+                    <td>Great teaching,you make us understood topics clearly,Thank You Sir</td>
+                </tr>
+                <tr>
+                    <td>R1911909</td>
+                    <td>A</td>
+                    <td>CNS</td>
+                    <td>Nice</td>
+                </tr>
+                
+                {% comment %} {% for i in fbs %}
+                <tr>
+                  {% comment %} <th>{{i.regnum}}</th>
+                  <th>{{i.section}}</th>
+                  <th>{{i.subjectname}}</th>
+                  <th>{{i.sugesstion}}</th> {% endcomment %}
+                {% comment %} </tr>
+                {% endfor %} {% endcomment %} 
+                
+          
+              </table>
+              </form> 
+    </body>
+</html>

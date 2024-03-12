@@ -1,0 +1,126 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+       <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        {% comment %} <link rel="stylesheet" href="{% static 'student.css' %}"> {% endcomment %}
+        <style>
+            .tb1{
+                position:absolute;
+                top:25%;
+                left:-8%;
+                text-align:center;
+                height:10vh;
+                width:100%;
+            }
+              .btn1{
+                font-family: sans-serif;
+                position: absolute;
+                left:40%;
+                top:90%;
+                color: green;
+                width: 220px;
+                height:70px;
+                font-size: 0.5cm;
+                cursor: pointer;
+            }
+            .td1{
+                position:absolute;
+                left:60%;
+            }
+            h1,h2,h3{text-align:center;color:black;}
+            
+        </style>
+  </head>
+  <body style="background-image: linear-gradient(to right, #bb3030, #58cc1e);">   
+  {% csrf_token %}
+  <h1>WELCOME, {% for i in rs %}</h1>
+  <h2 name="stuname">{{i.studentname}},</h2>
+  {% endfor %}
+  <form action="/feedback/" method="post">
+  {% csrf_token %}
+
+    <table class="tb1">
+
+        <tr>
+            <td class="td2"><h3>REGISTER NUM:</h3><td>
+            {% for i in rs %}
+            <td class="td1" ><select name="regnum"><option>{{i.studentid}}</option></select></td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            <td class="td2"><h3>SEMESTER:</h3><td>
+            {% for i in rs %}
+            <td class="td1" ><select name="stusem"><option>{{i.studentsem}}</option></select></td>  
+            {% endfor %}         
+        </tr>
+
+        <tr>
+            <td class="td2"><h3>SECTION:</h3><td>
+            {% for i in rs %}
+            <td class="td1" ><select name="stusec"><option>{{i.studentsec}}</option></select></td> 
+            {% endfor %}          
+        </tr>
+        
+        <tr>
+            <td class="td2"><h3>SELECT TEACHER:</h3></td>
+            <td class="td1"><select name="teachername">
+                {% for i in myteacher %}
+                <option>{{i.teacher}}</option>
+                {% endfor %}                        
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="td2"><h3>SELECT SUBJECT:</h3></td>
+            <td class="td1"><select name="subject">
+                {% for i in myteacher %}
+                <option>{{i.subjectname}}</option>
+                {% endfor %} 
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="td2"><h3>SELECT RATING:</h3></td>
+            <td class="td1"><select name="rating">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+                </select>
+            </td>
+        </tr> 
+
+        <tr>
+            <td class="td2" ><h3>FEEDBACKS:</h3></td>
+            <td class="td1"><textarea placeholder="Give Your Suggestions Here" name="suggestion"></textarea>
+            </td>
+        </tr>
+
+        </table>
+        
+        
+
+        <button type="submit"class="btn1" >SUBMIT FEEDBACK</button>
+  </form>
+
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size1cm;background-color:green;">
+          <strong>SUCCESS:{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>                 
+        {% endfor %}
+
+   
+  
+</body>
+</html>

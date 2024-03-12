@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'student.css' %}">
+        <style>
+            *
+            {
+            margin: 0;
+            padding: 0;
+            }
+            .shome
+            {
+            background-image: linear-gradient(to right,#de6262, #affb88);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            }
+            h1{
+                font-family: sans-serif;
+                position: absolute;
+                left:20%;
+                top:15%;
+                color: green;
+                font-size: 1cm;
+            }
+            .btn1{
+                font-family: sans-serif;
+                position: absolute;
+                left:15%;
+                top:35%;
+                color: green;
+                width: 300px;
+                height:100px;
+                font-size: 1cm;
+                cursor: pointer;
+            } 
+   
+            .btn2{
+                font-family: sans-serif;
+                position: absolute;
+                left:40%;
+                top:35%;
+                color: green;
+                width: 300px;
+                height:100px;
+                font-size: 1cm;
+                cursor: pointer;
+            }
+   
+            .btn3{
+                font-family: sans-serif;
+                position: absolute;
+                left:65%;
+                top:35%;
+                color: green;
+                width: 300px;
+                height:100px;
+                font-size: 1cm;
+                cursor: pointer;
+            }
+            .btn4{
+                   font-family: sans-serif;
+                   position: absolute;
+                   left:15%;
+                   top:60%;
+                   color: green;
+                   width: 300px;
+                   height:100px;
+                   font-size: 1cm;
+                   cursor: pointer;
+               }
+               .btn5{
+                font-family: sans-serif;
+                position: absolute;
+                left:40%;
+                top:60%;
+                color: green;
+                width: 300px;
+                height:100px;
+                font-size: 1cm;
+                cursor: pointer;
+            }
+
+            .btn6{
+                font-family: sans-serif;
+                position: absolute;
+                left:65%;
+                top:60%;
+                color: green;
+                width: 300px;
+                height:100px;
+                font-size: 1cm;
+                cursor: pointer;
+                border-style: ridge;
+                border-width: 9px;
+                border-color: corol;
+            }
+        </style>
+    </head>
+    <body>
+       
+        {% comment %} {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size: 1cm;background-color:green;">
+                  <strong>SUCCESS:{{ message }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                  
+            {% endfor %} {% endcomment %}
+        <div class="shome">
+            
+               <h1>WELCOME,</h1>
+               <form class="form-inline">
+                   <button class="btn1" ><a href="/addteacher/" target="-blank">ADD TEACHER</a></button>
+                   <button class="btn2" ><a href="/removeteacher/" target="-blank">REMOVE TEACHER</a></button>
+                   <button class="btn3"><a href="/faculty/" target="-blank">
+                    TEACHER LIST</a></button>
+                   <button class="btn4"><a href="/addstudent/" target="-blank">ADD STUDENT</a></button>
+                   <button class="btn5"><a href="/removestudent/" target="-blank">REMOVE STUDENT</a></button>
+                   <button class="btn6"><a href="/studentslist/" target="-blank">STUDENTS LIST</a></button>
+               </form>
+
+        <script src="" async defer></script>
+        </div>
+    </body>
+</html>

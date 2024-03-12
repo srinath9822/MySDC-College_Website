@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Remove Student</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right,#de6262, #affb88);
+        }
+        button{
+            background-color: #4CAF50;
+            width: 25%;
+            padding: 15px;
+            color: black;
+            border: none;
+            float: center;
+            font-size: 15px;
+        }
+        label{
+            font-size: 20px;
+        }
+        form{
+            border: 3px ;
+            background-image: linear-gradient(to right,#de6262, #affb88);
+        }
+        input[type=email],input[type=text]{
+            width: 50%;
+            font-size: 15px;
+            margin: 8px 0px;
+            padding: 13px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+        
+        button:hover{
+            opacity:0.7;
+
+        }
+        .container{
+            padding: 50px;
+            {% comment %} background-image: linear-gradient(to right,#de6262, #affb88); {% endcomment %}
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+          
+        img.avatar {
+            width: 10%;
+            border-radius: 50%;
+        } 
+        .items{
+            text-align: left;
+            position:absolute;
+            top:100px;
+          }
+          .factable{
+              position:absolute;
+              top:120px;
+              left:40%;
+          }
+          table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+          }
+       
+    </style>
+  </head>
+  <body>
+    <center><h1>Remove Student </h1></center>
+    <form method="post">
+        {% csrf_token %}
+        {% load static %}
+        <div class="container">
+            <div class="items">
+            <div class="imgcontainer">
+                <img src="{% static 'img/avatar.png' %}" alt="Avatar" class="avatar">
+            </div>
+            
+            <center>
+            <label for='tid'><b>STUDENT ID : </b></label>
+            <input class="some" type='text' placeholder="Create student ID" name='studid' required><br>  
+            <button type="submit"><b>Remove</b></button><br>
+            </center>
+        </div>
+    </div>
+    </form>
+    <form>
+        <table class="factable" width="50%" align="right">
+      <tr>
+        <th>STUDENT ID</th>
+        <th>STUDENT Name</th>
+        <th>STUDENT email</th>
+      </tr>
+      {% comment %} {% block content %} {% endcomment %}
+      {% for i in stuid %}
+      <tr>
+        <td>{{i.studentid}}</td>
+        <td>{{i.studentname}}</td>
+        <td>{{i.studentmail}}</td>
+      </tr>
+      {% endfor %}
+      {% comment %} {% endblock content %} {% endcomment %}
+
+    </table>
+    </form> 
+    {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size1cm;background-color:green;">
+          <strong>SUCCESS:{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+                  
+    {% endfor %} 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+body.loginbox{
+    background: url("");
+    background-size: cover;
+    background-position: center;
+   }
+   .loginbox{
+    width: 320px;
+    height: 480px;
+    background: #0000;
+    background-image: linear-gradient(to right,#de6262, #affb88);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: rgb(19, 1, 1);
+    top: 52%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    font-size: 19px;
+   }
+   h1{
+    margin: 0;
+    padding: 0 10 20;
+    text-align: center;
+    font-size: 22px;
+   }
+   h2{
+    margin: 0;
+    padding: 100 50 50;
+    text-align: center;
+    color: rgb(153, 23, 14);
+    font-size: 35px;
+    text-shadow: 5px 5px 10px rgb(39, 21, 21);
+    text-decoration-color: #fff;
+   }
+   .loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: italic;
+   }
+   .loginbox input{
+    width: 100%;
+    margin-bottom: 25px;
+   }
+   .loginbox input[type="text"], input[type="password"]
+   {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+    cursor: text;
+   }
+   .loginbox input[type="Submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+    font: solid;
+    font-size: 22px;
+    border-radius: 20px;
+   }
+   .loginbox input[type="Submit"]:hover{
+    cursor: pointer;
+    background: transparent;
+    color: green;
+   }
+   .loginbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+   }
+   .loginbox a:hover{
+    color: dodgerblue;
+   }
+   body.signinbox{
+    background: url("/Images/482379.jpg");
+    background-size: cover;
+    background-position: center;
+   }
+   .signinbox{
+    width: 320px;
+    height: 585px;
+    background: #0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: black;
+    top: 48%;
+    left: 80%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    font-size: 19px;
+   }
+   h1{
+    margin: 0;
+    padding: 0 10 20;
+    text-align: center;
+    font-size: 22px;
+   }
+   .signinbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: italic;
+   }
+   .signinbox input{
+    width: 100%;
+    margin-bottom: 20px;
+   }
+   .signinbox input[type="email"], input[type="password"],input[type="first name"],input[type="last name"],input[type="confirm password"]
+   {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+    cursor: text;
+    color: black;
+   }
+   .signinbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+    font: solid;
+    font-size: 22px;
+    border-radius: 20px;
+   }
+   .signinbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: transparent;
+    color: green;
+   }
+   .signinbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+   }
+   .signinbox a:hover{
+    color: dodgerblue;
+   }
+   body.forgotpasswordbox{
+    background: url("/Images/542555.jpg");
+    background-size: cover;
+    background-position: center;
+   }
+   .forgotpasswordbox{
+    width: 420px;
+    height: 500px;
+    background: #0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: black;
+    top: 48%;
+    left: 80%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    font-size: 19px;
+   }
+   h1{
+    margin: 0;
+    padding: 0 10 20;
+    text-align: center;
+    font-size: 22px;
+   }
+   .forgotpasswordbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: italic;
+   }
+   .forgotpasswordbox input{
+    width: 100%;
+    margin-bottom: 20px;
+   }
+   .forgotpasswordbox input[type="email"], input[type="password"],input[type="Confirm password"]
+   {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+    cursor: text;
+    color: black;
+   }
+   .forgotpasswordbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+    font: solid;
+    font-size: 22px;
+    border-radius: 20px;
+   }
+   .forgotpasswordbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: transparent;
+    color: green;
+   }
+   .forgotpasswordbox a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+   }
+   .forgotpasswordbox a:hover{
+    color: dodgerblue;
+   }
+   #popup1{
+    width: 225px;
+    height : 180px;
+    background: #0000;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: #000;
+    top: 50%;
+    left: -100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align : center;
+    padding: 0 30px 30px;
+    font-size: 19px;
+    visibility: hidden;
+   }
+   #popup1 h3{
+    font-size:38px;
+    font-weight:500;
+    margin:30px 0 10px;
+   }
+   #popup1 input[type="button"]
+   {
+    width:45%;
+    margin-top:40px;
+    padding:10px 0;
+    background: #12AD2B;
+    color: pink;
+    border:0;
+    outline:none;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 5px 5px rgba(0,0,0,0.2);
+   }
+   #popup1 input[type="button"]:hover{
+    cursor: pointer;
+    background: transparent;
+    color: green;
+   }
+
+   

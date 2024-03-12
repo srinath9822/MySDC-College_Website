@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Assign here</title>
+        <style>
+            body{
+                padding:0;
+                margin:0;
+                background-image: linear-gradient(to right, #bb3030, #58cc1e);
+            }
+            h1{
+                font-family: sans-serif;
+                position: absolute;
+                left:2%;
+                top:10%;
+                color: green;
+                font-size: 1cm;
+            }
+             .btn1{
+                    font-family: sans-serif;
+                    position: absolute;
+                    left:5%;
+                    top:73%;
+                    color: green;
+                    width: 200px;
+                    height:50px;
+                    font-size: 0.5cm;
+                    cursor: pointer;
+                }
+                .btn2{
+                    font-family: sans-serif;
+                    position: absolute;
+                    left:75%;
+                    top:73%;
+                    color: green;
+                    width: 200px;
+                    height:50px;
+                    font-size: 0.5cm;
+                    cursor: pointer;
+                }
+                .tb1{
+                    font-family: sans-serif;
+                    position: absolute;
+                    left:2%;
+                    top:10%;
+                    font-size: 0.5cm;
+                    text-align: center;
+                    border-color:red;
+                }
+                .factable{
+                    font-family: sans-serif;
+                    position: absolute;
+                    left:50%;
+                    top:10%;
+                    font-size: 0.5cm;
+                    text-align: center;
+                    border-color:red;
+                    
+                }
+        </style>  
+
+    </head>
+    <body >
+        <form method="post" style="background-image: linear-gradient(to right, #bb3030, #58cc1e);" action="/assignteach/">
+            {% csrf_token %}
+            <table class="tb1" border="5">
+                <tr>
+                    <td>NUMBER</td>
+                    <td><input type="text" name="num" placeholder="Enter number "></td>
+                </tr>
+                <tr>
+                    <td><h3>SELECT SEMESTER:</h3></td>
+                    <td><select name="semester">
+                        <option>1</option>                       
+                        <option>2</option> 
+                        <option>3</option> 
+                        <option>4</option> 
+                        <option>5</option> 
+                        <option>6</option> 
+                        <option>7</option> 
+                        <option>8</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>SELECT SECTION:</h3></td>
+                    <td><select name="section">
+                        <option>A</option> 
+                        <option>B</option> 
+                        <option>C</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3>SELECT SUBJECT:</h3></td>
+                    <td><select name="subjectname">
+                        {% for m in semes %}
+                        <option>{{m.subject}}</option>
+                        {% endfor %}
+                        </select>
+                    </td>
+                </tr> 
+                <tr>
+                    <td><h3>SELECT TEACHER:</h3></td>
+                    <td><select name="teacher">
+                        {% for m in tea %}
+                        <option>{{m.tname}}</option>
+                        {% endfor %}
+                        </select>
+                    </td>
+                </tr> 
+                
+            </table>
+            <button type="submit" class="btn1">ASSIGN</button>
+        </form>
+        <div>
+            <form action="/assignteach/">
+                {% csrf_token %}
+            <table class="factable" border="5">
+                <tr>
+                    {% comment %} <th>Number</th> {% endcomment %}
+                    <th>Semester</th>
+                    <th>Section</th>
+                    <th>Subject</th>
+                    <th>Teacher</th>
+                </tr>
+                {% for t in assigntable %}
+                <tr>
+                    {% comment %} <td>{{t.id}}</td> {% endcomment %}
+                    <td>{{t.semester}}</td>
+                    <td>{{t.section}}</td>
+                    <td>{{t.subjectname}}</td>
+                    <td>{{t.teacher}}</td>
+                </tr>
+                {% endfor %}
+          
+              </table>
+              <button type="submit" class="btn2">Refresh</button>
+            </form>
+        </div>
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-size1cm;background-color:green;">
+          <strong>SUCCESS:{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+                  
+        {% endfor %}
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>

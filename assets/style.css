@@ -1,0 +1,55 @@
+
+body{
+    background-image: linear-gradient(to right,#de6262, #affb88);
+}
+
+.navbar{
+    background-color: rgb(6, 63, 6);
+    background-image: linear-gradient(to right,#de6262, #affb88);
+}
+
+.dropdown-item{
+    background-color: green;
+    background-image: linear-gradient(to right,#de6262, #affb88);
+    vertical-align: top;
+    text-align: left;
+    color: rgb(243, 7, 7);
+    font-size: large;
+    font-style: italic;
+}
+
+.dropdown-hr{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+hr{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: rgb(7, 66, 2);
+}
+.dropdown-menu{
+    background-image: linear-gradient(to right,#de6262, #affb88);
+    color: tomato;
+}
+.head1{
+    color: #fff !important;
+    background-image: linear-gradient(to right,#de6262, #affb88);
+    margin-top: 0%;
+}
+.head2{
+    color: #fff !important;
+    text-shadow: 5px 5px 10px rgb(39, 21, 21);
+    
+}
+.head3{
+    color: #fff !important;
+    text-shadow: 5px 5px 10px rgb(39, 21, 21);
+    text-decoration-color: #fff;
+    text-indent: 1%;
+    
+}
+
+div.head1{
+    text-transform: uppercase;
+}
+
